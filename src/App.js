@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   generateRandomGerman() {
-    fetch(process.env.BACKEND_API)
+    fetch("https://beliebigersatz.herokuapp.com/sentence")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
