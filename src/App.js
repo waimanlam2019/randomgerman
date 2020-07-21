@@ -11,7 +11,20 @@ class App extends React.Component {
   }
 
   createStringFromObject(obj) {
-    return obj.subject + " " + obj.verb + " " + obj.object + ".";
+    if (obj.between == "null") {
+      return (
+        obj.subject +
+        " " +
+        obj.verb +
+        " " +
+        obj.between +
+        " " +
+        obj.object +
+        "."
+      );
+    } else {
+      return obj.subject + " " + obj.verb + " " + obj.object + ".";
+    }
   }
 
   generateRandomGerman() {
