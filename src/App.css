@@ -81,6 +81,6 @@ body {
 #generateBtn {
   text-align: center;
   margin: auto;
-  width: 30%;
+  width: auto;
   background-color: #cfcfcf;
 }

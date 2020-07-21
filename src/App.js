@@ -71,7 +71,7 @@ class GenerateButton extends React.Component {
       <button
         id="generateBtn"
         type="button"
-        className="btn btn-outline-primary btn-lg btn-block"
+        className="btn btn-outline-primary btn-lg btn-block active"
         onClick={this.handleClick}
       >
         Generate Random German
