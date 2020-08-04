@@ -11,20 +11,7 @@ class App extends React.Component {
   }
 
   createStringFromObject(obj) {
-    if (obj.between == "null") {
-      return (
-        obj.subject +
-        " " +
-        obj.verb +
-        " " +
-        obj.between +
-        " " +
-        obj.object +
-        "."
-      );
-    } else {
-      return obj.subject + " " + obj.verb + " " + obj.object + ".";
-    }
+    return obj.sentence;
   }
 
   generateRandomGerman() {
@@ -35,10 +22,6 @@ class App extends React.Component {
         let sentence = this.createStringFromObject(data);
         this.setState({ german: sentence, display: true });
       });
-
-    //var realSentence = this.createStringFromObject(sentence);
-
-    //this.setState({german: sentence, display:true});
   }
 
   render() {
