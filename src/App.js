@@ -17,7 +17,7 @@ class App extends React.Component {
   generateRandomGerman() {
     const dataToSend = JSON.stringify({ id: "1" });
 
-    fetch("https://gfx2eifn5b.execute-api.eu-central-1.amazonaws.com/dev", {
+    fetch("https://gfx2eifn5b.execute-api.eu-central-1.amazonaws.com/dev/", {
       credentials: "same-origin",
       mode: "same-origin",
       method: "post",
