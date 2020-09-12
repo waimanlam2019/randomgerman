@@ -15,15 +15,18 @@ class App extends React.Component {
   }
 
   generateRandomGerman() {
-    fetch("https://gfx2eifn5b.execute-api.eu-central-1.amazonaws.com/dev/", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: {
-        id: "1",
-      },
-    })
+    fetch(
+      "https://gfx2eifn5b.execute-api.eu-central-1.amazonaws.com/dev/sentence",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: {
+          id: "1",
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
