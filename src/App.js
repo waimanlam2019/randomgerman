@@ -7,7 +7,12 @@ class App extends React.Component {
     super(props);
     this.generateRandomGerman = this.generateRandomGerman.bind(this);
     this.createStringFromObject = this.createStringFromObject.bind(this);
+    this.getRndInteger = this.getRndInteger.bind(this);
     this.state = { german: "", display: false };
+  }
+
+  getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
   }
 
   createStringFromObject(obj) {
@@ -15,6 +20,10 @@ class App extends React.Component {
   }
 
   generateRandomGerman() {
+    const dataToSend = JSON.stringify({
+      id: this.getRndInteger(1, 5),
+    });
+
     fetch(
       "https://gfx2eifn5b.execute-api.eu-central-1.amazonaws.com/dev/sentence",
       {
@@ -22,9 +31,7 @@ class App extends React.Component {
         headers: {
           "content-type": "application/json",
         },
-        body: {
-          id: "1",
-        },
+        body: dataToSend,
       }
     )
       .then((response) => response.json())
