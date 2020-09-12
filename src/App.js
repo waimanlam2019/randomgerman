@@ -15,14 +15,14 @@ class App extends React.Component {
   }
 
   generateRandomGerman() {
-    const dataToSend = JSON.stringify({ id: "1" });
-
     fetch("https://gfx2eifn5b.execute-api.eu-central-1.amazonaws.com/dev/", {
-      credentials: "same-origin",
-      mode: "same-origin",
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: dataToSend,
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: {
+        id: "1",
+      },
     })
       .then((response) => response.json())
       .then((data) => {
