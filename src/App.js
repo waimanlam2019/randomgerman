@@ -21,7 +21,7 @@ class App extends React.Component {
 
   generateRandomGerman() {
     const dataToSend = JSON.stringify({
-      id: this.getRndInteger(1, 5),
+      id: this.getRndInteger(1, 9999),
     });
 
     fetch(
