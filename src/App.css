@@ -16,6 +16,12 @@ body {
   flex: 1 1 auto;
 }
 
+@media only screen and (max-width: 420px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
 .main-header div {
   background-color: #2fbd7a;
   text-align: center;
